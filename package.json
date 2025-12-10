@@ -1,25 +1,25 @@
 {
-  "name": "elizabeth_clean",
+  "name": "elizabeth",
   "version": "1.0.0",
-  "description": "[![Generic badge](https://img.shields.io/badge/course%20available%3F-yes-green.svg)](https://shields.io/)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polidario/Elizabeth_Clean.git"
+    "url": "git+https://github.com/polidario/Elizabeth.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/polidario/Elizabeth_Clean/issues"
+    "url": "https://github.com/polidario/Elizabeth/issues"
   },
-  "homepage": "https://github.com/polidario/Elizabeth_Clean#readme",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+  "homepage": "https://github.com/polidario/Elizabeth#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
   }
 }
