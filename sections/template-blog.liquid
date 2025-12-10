@@ -1,8 +1,10 @@
+{% comment %} Content SEO should be considered = {% endcomment %}
+
 <div class="py-8">
     {% paginate blog.articles by section.settings.number_of_blog_posts %}
 
         <h1 class="text-center text-3xl">{{ blog.title }}</h1>
-        
+
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {% for article in blog.articles %}
@@ -28,9 +30,9 @@
                                 <a href="{{ article.url }}" class="font-medium text-blue-600 hover:text-blue-800 my-4 block">{{ section.settings.blog_read_more }}</a>
                             </div>
 
-                            
+
                         </div>
-                        
+
                     </div>
                 {% endfor %}
             </div>

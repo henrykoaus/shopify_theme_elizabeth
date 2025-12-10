@@ -1,5 +1,5 @@
 {
-  "name": "elizabeth",
+  "name": "theme_elizabeth",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polidario/Elizabeth.git"
+    "url": "git+https://github.com/bbbpppolly/theme_elizabeth.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/polidario/Elizabeth/issues"
+    "url": "https://github.com/bbbpppolly/theme_elizabeth/issues"
   },
-  "homepage": "https://github.com/polidario/Elizabeth#readme",
+  "homepage": "https://github.com/bbbpppolly/theme_elizabeth#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
   }
 }

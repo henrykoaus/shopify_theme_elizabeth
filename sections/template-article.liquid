@@ -1,3 +1,4 @@
+{% comment %} Made it for more SEO friendly with schema, ld_json and so forth {% endcomment %}
 <article class="py-8" itemscope itemtype="http://schema.org/BlogPosting">
     {% for block in section.blocks %}
         {% case block.type %}
@@ -27,19 +28,19 @@
             {% when 'featured_image' %}
                 <div itemprop="image" class="max-w-7xl bg-blue-100 rounded-lg mx-2 md:mx-auto overflow-hidden my-4">
                     {% if article.image != blank %}
-                        <img class="w-full h-80 md:h-96 object-cover object-center" width="{{ article.image.width }}" height="{{ article.image.height }}" src="{{ article.image | image_url: 'large' }}" alt="{{ article.image.alt }}">
+                        <img class="w-full h-80 md:h-96 object-cover object-center" src="{{ article.image | img_url: 'large'}}" alt="{{ article.image.alt }}">
                     {% else %}
                         {% assign placeholder_image = 'lifestyle-1' %}
                         {{ placeholder_image | placeholder_svg_tag: 'w-full h-80 md:h-96 object-cover object-center p-5' }}
                     {% endif %}
                 </div>
-                
+
             {% when 'article_content' %}
                 <div class="flex items-center justify-center">
                     <div itemprop="articleBody" class="max-w-4xl">
                         {{ article.content }}
                     </div>
-                </div> 
+                </div>
             {% else %}
         {% endcase %}
     {% endfor %}
@@ -102,10 +103,10 @@
                 <div class="px-1 md:flex mb-3">
                     <div class="px-3 md:w-1/2">
                         <label for="comment_author" class="text-gray-700 font-medium uppercase text-xs mb-2">Name</label>
-                        <input 
-                            type="text" 
-                            name="comment[author]" 
-                            id="comment_author" 
+                        <input
+                            type="text"
+                            name="comment[author]"
+                            id="comment_author"
                             class="w-full text-gray-700 border py-3 px-4 mb-3 focus:outline-none"
                             placeholder="Jane Doe"
                             required
@@ -113,10 +114,10 @@
                     </div>
                     <div class="px-3 md:w-1/2">
                         <label for="comment_email" class="text-gray-700 font-medium uppercase text-xs mb-2">Email</label>
-                        <input 
-                            type="email" 
-                            name="comment[email]" 
-                            id="comment_email" 
+                        <input
+                            type="email"
+                            name="comment[email]"
+                            id="comment_email"
                             class="w-full text-gray-700 border py-3 px-4 mb-3 focus:outline-none"
                             placeholder="jane@doe.com"
                             required
@@ -150,7 +151,7 @@
     {% endif %}
     {% if article.image %}
         "image": [
-            {{ article.image | img_url: "medium" | prepend: 'https:' | json }} 
+            {{ article.image | img_url: "medium" | prepend: 'https:' | json }}
         ],
     {% endif %}
     "datePublished": {{ article.published_at | date: format: "default" | json }},
